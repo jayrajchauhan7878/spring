@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define parameterize constructor -->
+    <bean id="1" class="june01.studentmanagement.Student" >
+        <constructor-arg value="1" />
+        <constructor-arg value="Alice" />
+        <constructor-arg value="John" />
+        <constructor-arg>
+            <list>
+
+                <value>Math</value>
+                <value>Science</value>
+                <value>History</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="Math" value="A" />
+                <entry key="Science" value="B" />
+                <entry key="History" value="C" />
+            </map>
+        </constructor-arg>
+
+    </bean>
+
+    <bean id="2" class="june01.studentmanagement.Student">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Bob"/>
+        <constructor-arg value="Marley"/>
+        <constructor-arg>
+            <list>
+                <value>English</value>
+                <value>Biology</value>
+                <value>Geo</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="English" value="A"/>
+                <entry key="Biology" value="B"/>
+                <entry key="Geo" value="C"/>
+            </map>
+        </constructor-arg>
+
+    </bean>
+
+    <bean id="3" class="june01.studentmanagement.Student">
+        <constructor-arg value="3"/>
+        <constructor-arg value="Charlie"/>
+        <constructor-arg value="Brown"/>
+        <constructor-arg>
+            <list>
+                <value>Physics</value>
+                <value>Chemistry</value>
+                <value>Hindi</value>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg>
+            <map>
+                <entry key="Physics" value="A"/>
+                <entry key="Chemistry" value="B"/>
+                <entry key="Hindi" value="C"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <!-- Student beans with deafault cosntructor and settter -->
+
+    <bean id="4" class="june01.studentmanagement.Student">
+
+        <property name="studentId" value="1"/>
+        <property name="firstName" value="David"/>
+        <property name="lastName" value="Williams"/>
+        <property name="courses">
+            <list>
+                <value>History</value>
+                <value>Geo</value>
+                <value>Math</value>
+            </list>
+        </property>
+        <property name="grade">
+            <map>
+                <entry key="History" value="B"/>
+                <entry key="Geo" value="B"/>
+                <entry key="Math" value="B"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>
