@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="employee1" class="june01.employeemanagement.Employee">
+        <constructor-arg value="1"/>
+        <constructor-arg value="Jay"/>
+        <constructor-arg value="C" />
+
+        <constructor-arg >
+            <list>
+                <value>123-456-7890</value>
+                <value>123-456-7893</value>
+                <value>123-456-7894</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="CompanyA" value="Developer"/>
+                <entry key="Companyb" value="Manager"/>
+                <entry key="Companyc" value="Lead"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="employee2" class="june01.employeemanagement.Employee">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Meet"/>
+        <constructor-arg value="Dave"/>
+        <constructor-arg>
+            <list>
+                <value>234-567-8901</value>
+                <value>234-567-8902</value>
+                <value>234-567-8903</value>
+
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="CompanyE" value="Engineer"/>
+                <entry key="CompanyF" value="Sr .Engineer"/>
+                <entry key="CompanyG" value=" Team lead"/>
+
+            </map>
+
+        </constructor-arg>
+
+    </bean>
+
+    <bean id="3" class="june01.employeemanagement.Employee" >
+
+        <constructor-arg value="3"/>
+        <constructor-arg value="Rosh"/>
+        <constructor-arg value="Jack"/>
+        <constructor-arg>
+            <list>
+
+                <value>345-678-9012</value>
+                <value>345-678-9013</value>
+                <value>345-678-9014</value>
+
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="CompanyX" value="Analyst"/>
+                <entry key="Companyy" value="Sr. Analyst"/>
+                <entry key="CompanyZ" value="Team Lead"/>
+
+            </map>
+        </constructor-arg>
+
+
+    </bean>
+
+</beans>

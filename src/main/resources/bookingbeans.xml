@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- define bus booking beans -->
+
+    <bean class="june01.booking.BusBooking" name="busBooking"></bean>
+
+
+    <!-- define Train booking beans -->
+
+    <bean class="june01.booking.TrainBooking" name="trainBooking"></bean>
+
+    <!-- define BookingSystem beans -->
+
+    <bean class="june01.booking.BookingSystem" name="bookingSystem">
+        <constructor-arg ref="busBooking" />
+        <constructor-arg ref="trainBooking" />
+
+    </bean>
+
+
+
+
+
+
+</beans>
